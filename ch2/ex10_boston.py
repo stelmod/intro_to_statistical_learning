@@ -45,3 +45,24 @@ data.describe()
 
 sns.pairplot(data, x_vars=["CRIM", "PTRATIO", "INDUS", "AGE"], y_vars=data.keys())
 
+
+# In[9]:
+
+more_than7_rooms = data[data['RM'] > 7]
+more_than8_rooms = data[data['RM'] > 8]
+
+
+# In[10]:
+
+more_than7_rooms.describe()
+
+
+# In[11]:
+
+more_than8_rooms.describe()
+
+
+# In[12]:
+
+data.ix[data['AGE'].idxmin()]
+
