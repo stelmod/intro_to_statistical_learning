@@ -43,26 +43,31 @@ data.describe()
 
 # In[8]:
 
-sns.pairplot(data, x_vars=["CRIM", "PTRATIO", "INDUS", "AGE"], y_vars=data.keys())
+sns.distplot(data['TAX'])
 
 
 # In[9]:
+
+sns.pairplot(data, x_vars=["CRIM", "LSTAT", "NOX", "INDUS"], y_vars=data.keys())
+
+
+# In[10]:
 
 more_than7_rooms = data[data['RM'] > 7]
 more_than8_rooms = data[data['RM'] > 8]
 
 
-# In[10]:
+# In[11]:
 
 more_than7_rooms.describe()
 
 
-# In[11]:
+# In[12]:
 
 more_than8_rooms.describe()
 
 
-# In[12]:
+# In[13]:
 
-data.ix[data['AGE'].idxmin()]
+data.ix[data['MEDV'].idxmin()]
 
